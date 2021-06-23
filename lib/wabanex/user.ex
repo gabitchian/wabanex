@@ -24,7 +24,6 @@ defmodule Wabanex.User do
     |> validate_length(:name, min: 2)
     |> validate_format(:email, ~r/@/)
     |> unique_constraint([:email])
-    |> Create.call()
   end
 
   # defp handle_save({:ok, result})
